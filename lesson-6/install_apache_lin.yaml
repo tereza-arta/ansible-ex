@@ -1,0 +1,8 @@
+---
+- name: Install Apache in Amazon Linux server
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Install Apache web server
+    yum: name=httpd state=latest

@@ -1,0 +1,8 @@
+---
+- name: Uninstall Apache in Amazon Linux
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Install Apache web server
+    yum: name=httpd state=removed
